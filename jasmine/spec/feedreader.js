@@ -26,11 +26,21 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
+          describe('Checks array for valid url', function() {
+            var length = allFeeds.length;
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
-         */
+            function test_my_url(array) {
+                it('should check allfeeds urls', function() {
+                    expect(array.url).not.toBe('null');
+                    expect(arraylurl.length).not.toBe(0);
+            });
+            for (var i = 0; i < length; i++) {
+                test_my_url(allFeeds[i]);
+            }
+          }
+      })
+
+
 
 
         /* TODO: Write a test that loops through each feed
