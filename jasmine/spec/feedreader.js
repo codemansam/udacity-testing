@@ -27,15 +27,32 @@ $(function() {
         });
 
           describe('Checks array for valid url', function() {
-            var length = allFeeds.length;
+            //var length = allFeeds.length;
 
             function test_my_url(array) {
                 it('should check allfeeds urls', function() {
                     expect(array.url).not.toBe('null');
                     expect(arraylurl.length).not.toBe(0);
             });
-            for (var i = 0; i < length; i++) {
+            for (var i = 0; i < allFeeds.length; i++) {
                 test_my_url(allFeeds[i]);
+            }
+          }
+    })
+        /* TODO: Write a test that loops through each feed
+         * in the allFeeds object and ensures it has a name defined
+         * and that the name is not empty.
+         */
+
+    describe('Checks array for valid names', function() {
+
+            function test_my_name(array) {
+                it('should check allfeeds names', function() {
+                    expect(array.name).not.toBeDefined();
+                    expect(arraylurl.length).not.toBe('');
+            });
+            for (var i = 0; i < allFeeds.length; i++) {
+                test_my_name(allFeeds[i]);
             }
           }
       })
@@ -43,10 +60,7 @@ $(function() {
 
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
+
     });
 
 
