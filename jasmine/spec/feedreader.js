@@ -38,7 +38,7 @@ $(function() {
                 test_my_url(allFeeds[i]);
             }
           }
-    })
+    });
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
@@ -55,22 +55,23 @@ $(function() {
                 test_my_name(allFeeds[i]);
             }
           }
-      })
+      });
 
-
-
-
-
-    });
-
-
-    /* TODO: Write a new test suite named "The menu" */
+    /* TODO: Write a new test suite named "The menu"   <--   NEW SUITE */
 
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+    // http://www.htmlgoodies.com/beyond/javascript/js-ref/testing-dom-events-using-jquery-and-jasmine-2.0.html
+
+
+
+    });
+
+
+
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
@@ -78,8 +79,8 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
-    /* TODO: Write a new test suite named "Initial Entries" */
-
+    /* TODO: Write a new test suite named "Initial Entries"  <-  New SUITE */
+    // This seems likely to be that trickier asynchronous one.  Remember done() from last example in 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
@@ -87,7 +88,7 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
+    /* TODO: Write a new test suite named "New Feed Selection" <- New SUITE */
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
