@@ -42,7 +42,6 @@ describe('RSS Feeds', function() {
                 });
             });
         });
-
                 /* TODO: Write a new test suite named "The menu"   <--   NEW SUITE */
 
                 /* TODO: Write a test that ensures the menu element is
@@ -58,7 +57,6 @@ describe('RSS Feeds', function() {
                         expect(body).toBe('menu-hidden');
                     });
                 });
-
 
                 /* TODO: Write a test that ensures the menu changes
                  * visibility when the menu icon is clicked. This test
@@ -101,6 +99,7 @@ describe('RSS Feeds', function() {
                         expect(feed.hasChildNodes()).toBe(true); // If more than 0 feed should have child nodes
                     });
                 });
+
                 /* TODO: Write a new test suite named "New Feed Selection" <- New SUITE */
 
             /* TODO: Write a test that ensures when a new feed is loaded
@@ -124,4 +123,5 @@ describe('RSS Feeds', function() {
 
                     });
                 });
+
             });
