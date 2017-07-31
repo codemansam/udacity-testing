@@ -29,7 +29,7 @@ $(function() {
             //var length = allFeeds.length;
 
             function test_my_url(array) {
-                it('should check allfeeds urls', function() {
+                it('should check allFeeds urls', function() {
                     expect(array.url).not.toBe('null');
                     expect(arraylurl.length).not.toBe(0);
                 });
@@ -79,15 +79,16 @@ $(function() {
          * clicked and does it hide when clicked again.
          */
 
-        describe('the menu appear when icon clicked and disappeared when clicked again', function() {
+        describe('the menu appears when icon clicked and disappears when clicked again', function() {
+
             it('checks menu-hidden is added to body or removed if present when button clicked', function() {
                 var bodyAttribute = document.getElementsByTagName("body")[0].getAttribute("class");
                 expect(bodyAttribute).toBe('menu-hidden');
-                alert(bodyAttribute);
+                // alert(bodyAttribute);
                 var menuIcon = $('.menu-icon-link');
                 menuIcon.trigger('click');
                 bodyAttribute = document.getElementsByTagName("body")[0].getAttribute("class");
-                alert(bodyAttribute);
+                // alert(bodyAttribute);
                 expect(bodyAttribute).not.toBe('menu-hidden');
 
             });
@@ -109,10 +110,9 @@ $(function() {
                 });
             });
 
-            it('should have at least one .entry withing the .feed contatiner'.function(done) {
-                expect('loadfeed to have completed loading.');
-                loadfeed(done).toBe(true);
-
+            it('should have at least one entry withing the feed container', function(done) {
+                var feed = document.getElementsByClassName('feed');
+                expect(feed.hasChildNodes()).toBe(true);
             })
         })
         /* TODO: Write a new test suite named "New Feed Selection" <- New SUITE */
