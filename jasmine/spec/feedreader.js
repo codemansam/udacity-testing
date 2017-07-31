@@ -12,7 +12,7 @@ $(function() {
              * a related set of tests. This suite is all about the RSS
              * feeds definitions, the allFeeds variable in our application.
              */
-            describe('RSS Feeds', function() {
+describe('RSS Feeds', function() {
                 /* This is our first test - it tests to make sure that the
                  * allFeeds variable has been defined and that it is not
                  * empty. Experiment with this before you get started on
@@ -25,37 +25,23 @@ $(function() {
                     expect(allFeeds.length).not.toBe(0);
                 });
 
-                describe('Checks array for valid url', function() {
-
-                    function test_my_url(array) {
-                        alert("test working?")
-                        it('should check allFeeds urls', function() {
-                            expect(array.url).not.toBe('null');
-                            alert(array.url.length);
-                            expect(array.url.length).not.toBe(0);
-                        });
-                        for (var i = 0; i < allFeeds.length; i++) {
-                            test_my_url(allFeeds[i]);
-                        }
-                    }
-                });
                 /* TODO: Write a test that loops through each feed
                  * in the allFeeds object and ensures it has a name defined
                  * and that the name is not empty.
                  */
 
-                describe('Checks array for valid names', function() {
+                it('should check allFeeds names and urls are defined properly', function() {
+                allFeeds.forEach(function(feed) {
+                    // alert("checking allFeeds names and urls");
 
-                    function test_my_name(array) {
-                        it('should check allfeeds names', function() {
-                            expect(array.name).not.toBeDefined();
-                            expect(arraylurl.length).not.toBe('');
-                        });
-                        for (var i = 0; i < allFeeds.length; i++) {
-                            test_my_name(allFeeds[i]);
-                        }
-                    }
+
+                    expect(feed.name).toBeDefined(); // should have a name defined
+                    expect(feed.name.length).not.toBe(0); // that name should be greater than 0 characters long! 
+                    expect(feed.url).toBeDefined(); // url should be defined
+                    expect(feed.url.length).not.toBe(0); // url length should be greater than zero!
                 });
+            });
+        });
 
                 /* TODO: Write a new test suite named "The menu"   <--   NEW SUITE */
 
@@ -139,4 +125,3 @@ $(function() {
                     });
                 });
             });
-            }());
