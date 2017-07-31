@@ -18,7 +18,7 @@ $(function() {
                  * empty. Experiment with this before you get started on
                  * the rest of this project. What happens when you change
                  * allFeeds in app.js to be an empty array and refresh the
-                 * page?
+                 * page?  -> page doesn't load and we see Jasmine test info.
                  */
                 it('are defined', function() {
                     expect(allFeeds).toBeDefined();
@@ -26,12 +26,13 @@ $(function() {
                 });
 
                 describe('Checks array for valid url', function() {
-                    //var length = allFeeds.length;
 
                     function test_my_url(array) {
+                        alert("test working?")
                         it('should check allFeeds urls', function() {
                             expect(array.url).not.toBe('null');
-                            expect(arraylurl.length).not.toBe(0);
+                            alert(array.url.length);
+                            expect(array.url.length).not.toBe(0);
                         });
                         for (var i = 0; i < allFeeds.length; i++) {
                             test_my_url(allFeeds[i]);
